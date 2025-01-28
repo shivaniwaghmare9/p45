@@ -118,6 +118,8 @@ int main() {
 #include<iostream>
 using namespace std;
 class top{
+    int c=0;
+    bool f=true;
     
     public:void insertsort(int arr[],int s){
         for(int i=1; i<s; i++){
