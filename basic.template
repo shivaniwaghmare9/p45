@@ -1,0 +1,51 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void sum (int a, int b)
+{
+   cout<<a+b;
+}
+void sum(double a,double b)
+{
+    cout<<a+b;
+}
+int main() {
+    sum(3.4,4.3);
+}
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void sum (int a, int b)
+{
+   cout<<a+b;
+}
+void sum(float a,float b)
+{
+    cout<<a+b;
+}
+int main() {
+    sum(3.4,4.3);
+}
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void sum (int a, int b)
+{
+   cout<<a+b;
+}
+int main() {
+    sum(3,4);
+}
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void sum (int a, int b)
+{
+   cout<<a+b;
+}
+int main() {
+    sum(3,4.3);
+}
