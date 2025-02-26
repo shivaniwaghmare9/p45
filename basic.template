@@ -62,4 +62,23 @@ t1 sum(t1 a,t1 b)
 int main()
 {
    cout<<sum(2.3,2.3);                      //output=4.6
+   
+}
+// Online C++ compiler to run C++ program online
+//=====================================template============================================
+#include <iostream>
+using namespace std;
+template <typename t1>
+t1 sum(t1 a,t1 b){
+    return a+b;
+}
+template <typename t1,typename t2>
+int multi(t1 x1,t2 x2){
+    return x1*x2;
+}
+
+int main() {
+    cout<<sum(4,5)<<"\n";
+    cout<<multi(4.3,3.4);                    //outpu-9
+                                              //14
 }
