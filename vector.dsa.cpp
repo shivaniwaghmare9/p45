@@ -166,3 +166,48 @@ for(auto p:v){
 }
 }   
 
+// Online C++ compiler to run C++ program online
+//==========================================dynamic program of vector(insert function)with iterator=============================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+int main() {
+    vector<int>v;   
+    int n ,b;
+    cout<<"How many element"<<"\n";
+    cin>>n;
+   cout<<"size of v="<<v.size()<<"\n"; 
+   for(int i=1; i<=n; i++){
+       cout<<"enter the number"<<"\n";
+       cin>>b;
+       v.push_back(b);
+   }
+    for(auto p:v){
+        cout<<p<<"\t";             
+    }  
+    
+    // v.pop_back();
+    // cout<<"\nAfter deletion\n";
+    // for(auto p:v){
+    //     cout<<p<<"\t";             
+    // }   
+    vector<int>::iterator it=v.begin();//starts se value add
+    v.insert(it+1,300);
+    v.insert(it+3,400);
+    cout<<"\n Insert at begin\n";
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+    //ydi last se value insert karvana h to(end()) ka use
+     vector<int>::iterator itt=v.end();
+     v.insert(itt-1,30);  //second last position pr insert
+    v.insert(itt-2,41);  
+    cout<<"\n Insert at end\n";
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+     
+}
+
