@@ -135,9 +135,27 @@ int main() {
      sort(v2.begin(),v2.end());
     for(auto n:v2){
         cout<<n<<"\t";
-    }
-    
-    
-    
+    }    
 }
+
+//=========================================================swaping of two arrays
+#include <iostream>
+using namespace std;
+#include <array>
+//#include <algorithm>
+int main() {
+ array<int,5>arr1{56,78,34,23};
+  array<int,5>arr2{25,73,22,21,45};
+  arr1.swap(arr2);
+ // swap(arr1,arr2);
+  for(auto p1:arr1){
+      cout<<p1<<"\t";
+  }
+  cout<<"\n arr2\n";
+   for(auto p2:arr2){
+      cout<<p2<<"\t";
+  }
+ 
+}
+
 
