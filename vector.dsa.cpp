@@ -104,3 +104,65 @@ int main() {
    
    
 }
+
+// Online C++ compiler to run C++ program online
+//==============================================================static program of vector================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main() {
+ vector<int>v(5,10);
+ v[0]=90;
+  v[2]=89;
+   v[4]=100;
+   cout<<"size="<<v.size()<<"\n";
+   for(auto p:v){
+       cout<<p<<"\t";
+   }
+}
+
+// Online C++ compiler to run C++ program online
+//==========================================dynamic program of vector==========================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main() {
+vector<int>v;
+int n,b;
+cout<<"how many elements\n";
+cin>>n;
+for(int i=1; i<=n; i++){
+    cout<<"enter value\n";
+    cin>>b;
+    v.push_back(b);
+}
+for(auto p:v){
+    cout<<p<<"\t";
+}
+}
+
+// Online C++ compiler to run C++ program online
+//==========================================dynamic program of vector==========================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main() {
+vector<int>v;
+int n,b;
+cout<<"How many elements\n";
+cin>>n;
+for(int i=1; i<=n; i++){
+    cout<<"Enter value\n";
+    cin>>b;
+    v.push_back(b);               //Add the element last
+}
+for(auto p:v){
+    cout<<p<<"\t";
+}
+v.pop_back();                     //pop_back last se data delete
+cout<<"\nAfter deletion\n";
+for(auto p:v){
+    cout<<p<<"\t";
+}
+}   
+
