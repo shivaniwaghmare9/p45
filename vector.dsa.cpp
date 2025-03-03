@@ -211,3 +211,261 @@ int main() {
      
 }
 
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+#include<iterator>
+#include<algorithm>
+using namespace std;
+int main()
+{
+   
+    vector<int>v;
+    v.push_back(2);
+    v.push_back(20);
+    v.push_back(1);
+    v.push_back(39);
+    v.push_back(14);
+    
+    for(auto p:v){
+        cout<<"p value="<<p<<"\n";
+    }
+    
+    vector<int>::iterator it = v.begin();
+    v.insert(it,32);
+    
+    for(auto p2:v){
+        cout<<p2<<"\t";
+    }
+    
+    v.pop_back();
+    
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+    v.erase(it+2);
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+
+    
+    
+}
+    
+    
+
+// Online C++ compiler to run C++ program online
+//=====================================erase(value(data) based delete)=======================================================
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+#include<iterator>
+#include<algorithm>
+using namespace std;
+int main()
+{
+   
+    vector<int>v;
+    v.push_back(2);
+    v.push_back(20);
+    v.push_back(1);
+    v.push_back(39);
+    v.push_back(14);
+    
+    for(auto p:v){
+        cout<<"p value="<<p<<"\n";
+    }
+    
+    vector<int>::iterator it = v.begin();
+    v.insert(it,32);
+    
+    for(auto p2:v){
+        cout<<p2<<"\t";
+    }
+    
+    v.pop_back();
+    
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+    v.erase(it+2);
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+
+    
+    
+    int x;
+    cout<<"enter the value for search";
+    cin>>x;
+    auto j=find(v.begin(),v.end(),x);
+    cout<<*j; //or ye value ke according hota h delete
+    
+    v.erase(j); // address ke according hm delete kr sakte h
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+}   
+
+// Online C++ compiler to run C++ program online
+//=====================================erase and(revesre)=============================================================
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+#include<iterator>
+#include<algorithm>
+using namespace std;
+int main()
+{
+   
+    vector<int>v;
+    v.push_back(2);
+    v.push_back(20);
+    v.push_back(1);
+    v.push_back(39);
+    v.push_back(14);
+    
+    for(auto p:v){
+        cout<<"p value="<<p<<"\n";
+    }
+    
+    vector<int>::iterator it = v.begin();
+    v.insert(it,32);
+    
+    for(auto p2:v){
+        cout<<p2<<"\t";
+    }
+    
+    v.pop_back();
+    
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+    v.erase(it+2);
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+
+    
+    
+    // int x;
+    // cout<<"enter the value for search";
+    // cin>>x;
+    // auto j=find(v.begin(),v.end(),x);
+    // cout<<*j; //or ye value ke according hota h delete
+    
+    // v.erase(j); // address ke according hm delete kr sakte h
+    // cout<<"\n";
+    
+    // for(auto p:v){
+    //     cout<<p<<"\t";
+    // }
+    
+    
+    reverse(v.begin(), v.end());
+    for(auto p:v){
+        cout<<p<<"\t";
+        
+    }
+}
+
+// Online C++ compiler to run C++ program onlin
+//==========================================================================max-min value
+#include <iostream>
+#include <vector>
+#include<iterator>
+#include<algorithm>
+using namespace std;
+int main()
+{
+   
+    vector<int>v;
+    v.push_back(2);
+    v.push_back(20);
+    v.push_back(1);
+    v.push_back(39);
+    v.push_back(14);
+    
+    for(auto p:v){
+        cout<<"p value="<<p<<"\n";
+    }
+    
+    vector<int>::iterator it = v.begin();
+    v.insert(it,32);
+    
+    for(auto p2:v){
+        cout<<p2<<"\t";
+    }
+    
+    v.pop_back();
+    
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+    v.erase(it+2);
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+
+    
+    
+    // int x;
+    // cout<<"enter the value for search";
+    // cin>>x;
+    // auto j=find(v.begin(),v.end(),x);
+    // cout<<*j; //or ye value ke according hota h delete
+    
+    // v.erase(j); // address ke according hm delete kr sakte h
+    // cout<<"\n";
+    
+    // for(auto p:v){
+    //     cout<<p<<"\t";
+    // }
+    
+    
+    // reverse(v.begin(), v.end());
+    // for(auto p:v){
+    //     cout<<p<<"\t";
+        
+    // }
+    
+    cout<<"min value:"<<*min_element(v.begin(),v.end())<<endl;
+    cout<<"max value:"<<*max_element(v.begin(),v.end())<<endl;
+    
+    
+    if(v.empty()){
+        cout<<"vector is mt";
+    }else{
+        cout<<"vector is not mt";
+    }
+    
+    v.clear();
+    if(v.empty()){
+        
+    }
+}
