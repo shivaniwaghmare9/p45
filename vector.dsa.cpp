@@ -253,9 +253,39 @@ int main()
         cout<<p<<"\t";
     }
 
-    
+}
+//===================================================or========================================================================
+#include <iostream>
+#include <vector>
+#include <iterator>  //erase mangta h iterator
+using namespace std;
+int main(){
+    vector<int>v;
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(1);
+    v.push_back(23);
+    v.push_back(15);
+    v.push_back(47);
+    for(auto p:v){
+        cout<<p<<"\t";   //push_back
+    }                                                      //output
+    cout<<"\n";                                                 //   3	4	1	23	15	47	
+                                                                 //3	4	1	23	15	
+                                                                // 3	4	23	15	
+     v.pop_back();
+     for(auto p:v){
+        cout<<p<<"\t";   //pop_back
+    }
+    cout<<"\n";
+    vector<int>::iterator it=v.begin();
+    v.erase(it+2);      //second indexing erase
+    for(auto p:v){
+        cout<<p<<"\t";   //erase 
+    }
     
 }
+
     
     
 
@@ -468,4 +498,71 @@ int main()
     if(v.empty()){
         
     }
+}
+// Online C++ compiler to run C++ program online
+//================================pair=================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() {
+    pair<int ,string>p{101,"joy"};//direct pair se 
+    p=make_pair(102,"hny");
+    cout<<p.first<<":"<<p.second;
+  
+   vector<pair<int,string>>v;    //vector ke andar pair se
+   int rollno,n;         //do value ek sath store kr skate h
+   string name;
+   cout<<"\nHow many data stored\n";
+   cin>>n;
+   for(int i=1; i<=n; i++){
+       cout<<"Enter the Name=";
+      cin>>name;
+        cout<<"Enter the rollno=";
+       cin>>rollno;
+      v.push_back(make_pair(rollno,name));
+   }
+   cout<<"\n stored data are\n";
+   for(int i=0; i<v.size(); i++){
+       cout<<v[i].first<<":"<<v[i].second<<"\n";
+   }
+  
+  
+}
+
+// Online C++ compiler to run C++ program online
+//===============================tuple codey ye do se jyada value store krta h===================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <tuple>
+
+int main() {
+    tuple<int ,string,int>p{101,"joy",21};//direct pair se 
+    p=make_tuple(102,"hny",22);
+   cout<<"rollno:"<<get<0>(p)<<"\n";
+    cout<<"name:"<<get<1>(p)<<"\n";
+     cout<<"age:"<<get<2>(p)<<"\n";
+  
+   vector<tuple<int,string,int>>v;    //vector ke andar pair se
+   int rollno,age,n;         //do value ek sath store kr skate h
+   string name;
+   cout<<"\nHow many data stored\n";
+   cin>>n;
+   for(int i=1; i<=n; i++){
+       cout<<"Enter the Name=";
+      cin>>name;
+        cout<<"Enter the rollno=";
+       cin>>rollno;
+       cout<<"Enter the age=";
+       cin>>age;
+     // v.push_back(make_tuple(rollno,name,age));  or insert kr skte h dono type se
+     v.push_back({rollno,name,age});
+   }
+   cout<<"\n stored data are\n";
+   for(int i=0; i<v.size(); i++){
+       cout<<get<0>(v[i])<<":"<<get<1>(v[i])<<":"<<get<2>(v[i])<<"\n";
+   }
+  
+  
 }
