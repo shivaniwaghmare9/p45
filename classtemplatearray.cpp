@@ -129,7 +129,7 @@ int main() {
     for(auto p:v){
         cout<<p<<"\t";
     }
-     cout<<"\n second highest of v\n";
+     cout<<"\n third highest of v\n";
     cout<<v[2];
     cout<<"\n";
      sort(v2.begin(),v2.end());
@@ -138,7 +138,7 @@ int main() {
     }    
 }
 
-//=========================================================swaping of two arrays
+//=========================================================swaping of two arrays===============================
 #include <iostream>
 using namespace std;
 #include <array>

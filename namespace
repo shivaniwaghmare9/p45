@@ -1,43 +1,35 @@
-
-
-//=================================namespace=============================
-#include<iostream>
+// Online C++ compiler to run C++ program online
+//============================namespace ke andar namespace======================================================================================
+#include <iostream>
 using namespace std;
-namespace cybrom{
-    
-    void student(){
-        cout<<"cybrom student"<<endl;
-    }
-    
-namespace bhopal{
-    
-    void student(){
+
+
+    namespace cybrom {
+        void student(){
+            cout<<"\n cybrom student\n";
+        }
+     namespace bhopal{
+         void student(){
+             cout<<"\n bhopal studnet\n";
+         }
+     } 
+     void show(){
+         cout<<"\n first program\n";
+     }
+     class iostreamnew{
+         public:void show(){
+             cout<<"\n class example\n";
+         }
+     }
+     coutnew;
         
-        cout<<"bhopal student"<<endl;
     }
-} 
-void show(){
-    
-    cout<<"first program"<<endl;
+    using namespace cybrom;
+    int main() {
+        bhopal::student();
+        student();
+        show();
+        coutnew.show();
+        iostreamnew obj;
+        obj,show();
 }
-class iostream{
-    
-    public:void show(){
-        cout<<"clsaa example"<<endl;
-    }
-}coutnew;
-}
-// using namespace cybrom;
-
-int main(){
-    
-    cybrom::bhopal::student();
-    cybrom::student();
-    // show();
-    // coutnew.show();
-    // iostream obj;
-    // obj.show();
-}
-
-
-
