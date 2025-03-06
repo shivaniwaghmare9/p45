@@ -96,6 +96,65 @@ int main() {
        cout<<sum[i]<<"\t";
     }
 }
+// Online C++ compiler to run C++ program online
+//============================================additon of two vectors(dynamic) addition of last se===========================================addition of two vectors=====================================
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+int n1,n2;
+cout<<"size of vector 1:";
+cin>>n1;
+cout<<"size of vector 2:";
+cin>>n2;
+ 
+ vector<int>v1(n1);
+ vector<int>v2(n2);
+
+ int sumv1=0;
+ int sumv2=0;
+ 
+ for(int i=0; i<n1; i++){
+    cout<<"element of v1:";
+    cin>>v1[i];
+}
+for(int i=0; i<n2; i++){
+    cout<<"element of v2:";
+    cin>>v2[i];
+}
+
+for(int i=0; i<v1.size();i++){
+    sumv1=sumv1*10+v1[i];
+}
+for(int i=0; i<v2.size();i++){
+    sumv2=sumv2*10+v2[i];
+}
+cout<<"\nAddition\n";
+cout<<sumv1+sumv2<<"\t";
+
+}
+// Online C++ compiler to run C++ program online
+//===================================addition of two vectors(static) addition of last se=====================================
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+ vector<int>v1{5,4,3,2,9};
+ vector<int>v2{7,8,6,5,9,8,7};
+
+ int sumv1=0;
+ int sumv2=0;
+ 
+for(int i=0; i<v1.size();i++){
+    sumv1=sumv1*10+v1[i];
+}
+for(int i=0; i<v2.size();i++){
+    sumv2=sumv2*10+v2[i];
+}
+cout<<"\nAddition\n";
+cout<<sumv1+sumv2<<"\t";
+
+}
 //=====================sum of v1 and sum of v2 add the print of highest value =========================================================
 #include <iostream>
 using namespace std;
