@@ -251,7 +251,7 @@ int main() {
     else{
         cout<<"\nboth vector equal:"<<"\n";
     }
-
+}
     // Online C++ compiler to run C++ program online
 //===================================unique value duplicate ek hi bar print ho=====================================================================================================
 #include <iostream>
@@ -383,6 +383,6 @@ int main()
 //   cout<<endl;
 
   
-}
+//}
 
 
