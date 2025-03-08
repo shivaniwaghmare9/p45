@@ -251,6 +251,31 @@ int main() {
     else{
         cout<<"\nboth vector equal:"<<"\n";
     }
+
+    // Online C++ compiler to run C++ program online
+//===================================unique value duplicate ek hi bar print ho=====================================================================================================
+#include <iostream>
+#include <vector>
+#include<algorithm>
+using namespace std;
+
+int main() 
+{
+   vector<int>v{2,5,1,5,2,6,3,4,1};
+   sort(v.begin(),v.end());
+   int x=1;
+   for(int i=1; i<v.size();i++)
+   {
+       if(v[x-1]!=v[i])
+       {
+           v[x]=v[i];
+           x++;
+       }
+   }
+   for(int i=0; i<x; i++){
+       cout<<v[i]<<"\t";
+   }
+}
     
     //======================ADDITION OF TWO VECTORS DIFFRENT SIZE==========
     // int n1,n2;
