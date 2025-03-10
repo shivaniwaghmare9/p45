@@ -120,3 +120,78 @@ int main() {
     // cout<<st.tops();
    
 }
+
+// Online C++ compiler to run C++ program online
+//====================================stacks=========================================================================================
+#include <iostream>
+using namespace std;
+class stacks{
+    public:int *arr;
+    int n,top;
+    stacks(int s)
+    {
+        n=s;
+        arr=new int[n];
+        top=-1;
+    }
+    void pushs(int v)
+    {
+        if(top==n-1)
+        {
+            cout<<"overflow";
+            return ;
+        }
+        top++;
+        arr[top]=v;
+    }
+    int pops()
+    {
+        if(top==-1)
+        {
+            cout<<"under flow";
+            return 0;
+        }
+        return top--;
+    }
+    int tops()
+    {
+        if(top==-1){
+            cout<<"there is no element";
+            return 0;
+        }
+        return arr[top];
+    }
+    
+};
+int main() {
+    int s,v;
+    cout<<"enter size of array\n";
+    cin>>s;
+    stacks st(s);
+    for(int i=1; i<=s; i++){
+        cout<<"enter the value\n";
+        cin>>v;
+        st.pushs(v);
+    }
+    cout<<"after push:";
+    st.pushs(12);            //overflow because size se jyada element insert ho gya
+   
+    // while(st.top!=-1){
+    //     cout<<st.tops()<<"\t";
+    //     st.pops();
+    // }
+   // cout<<"top element="<<st.tops()<<"\n";
+    cout<<"\ntop value="<<st.tops()<<"\t";
+    cout<<"\nafter pop elment of top:";
+    st.pops();
+    cout<<st.tops()<<"\n";
+     st.pops();
+    cout<<st.tops()<<"\n";
+     st.pops();
+    cout<<st.tops()<<"\n";    //there is no element
+    st.pops();
+    cout<<st.tops()<<"\n";    //underflow because -1 pr pops aa gya
+   
+    
+   
+}
