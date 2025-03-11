@@ -21,11 +21,11 @@ int main() {
     f1.push_front(2);
     f1.push_front(34);
     cout<<"list f value:";
-    for(auto p:f){ //26 9 10 34 12 isme niche se data aata h niche vala phle fir ukse upar -------
+    for(auto p:f){ //34 26 9 10 34 12 isme niche se data aata h niche vala phle fir ukse upar -------
         cout<<p<<"\t";
     }
     cout<<"\nlist f1 value:";
-    for(auto p:f1){ //26 9 10 34 12 isme niche se data aata h niche vala phle fir ukse upar -------
+    for(auto p:f1){ //34 2 47 1 23 11 isme niche se data aata h niche vala phle fir ukse upar -------
         cout<<p<<"\t";
     }
     
@@ -62,5 +62,11 @@ int main() {
     for(auto p:f){
         cout<<p<<"\t";
     }
-    
+    cout<<"\n delete:";
+    f.pop_front();
+    for(auto p:f){
+    cout<<p<<"\t";
+    }
+    cout<<"\nDistance\n";
+    cout<<"size="<<distance(f.begin(),f.end());   
 }
