@@ -260,18 +260,21 @@ int main() {
 }
 
 // Online C++ compiler to run C++ program online
-//====================================UNORDERDED_MAP(INPUT BY USER )=======================================================================================================
+//====================================UNORDERDED_MAP(ROMAN )=======================================================================================================
 #include <iostream>
 using namespace std;
 #include <unordered_map>
 int romantoint(string s){
     unordered_map<char,int>up{{'I',1},{'V',5},{'X',10}};
     int r=0; 
-    for(int i=0; i<s.size(); i++){
-        if(up[s[i]<up[s[i+1]]]){
+    for(int i=0; i<s.size(); i++)
+    {
+        if(up[s[i]<up[s[i+1]]])
+        {
             r=r-up[s[i]];
         }
-        else{
+        else
+        {
             r=r+up[s[i]];
         }
     }
@@ -279,10 +282,6 @@ int romantoint(string s){
 }
 
 int main() {
-   
-  
       string s="XI";
       cout<< romantoint(s);
-   
-   
 }
