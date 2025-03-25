@@ -100,3 +100,35 @@ int main() {
      cout<<"\npostorder\n";
      postorder(root);
 }
+// Online C++ compiler to run C++ program online
+//==============================(=multimap)========================================================================================
+#include <iostream>
+using namespace std;
+#include <map>
+int main() {
+    
+    multimap<int,string>multi;
+    multi.insert({101,"sunny"});
+    multi.insert({90,"ravi"});
+    multi.insert({101,"honey"});
+    multi.insert({901,"ruhi"});
+    for(auto p:multi)
+    {
+        cout<<p.first<<","<<p.second<<"\n";
+    }
+    auto it=multi.find(101);
+    if(it!=multi.end())
+    {
+        multi.erase(it);
+        //multi.erase(101);
+    }
+    else
+    {
+      cout<<"not found";
+    }
+    cout<<"\n";
+    for(auto p:multi)
+    {
+        cout<<p.first<<","<<p.second<<"\n";
+    }
+}
