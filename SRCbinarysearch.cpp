@@ -47,6 +47,7 @@ int main() {
     cin>>n;
     for(int i=1; i<=n; i++)
     {
+        cout<<"enter node:";
         cin>>val;
         root=create(root,val);
     }
