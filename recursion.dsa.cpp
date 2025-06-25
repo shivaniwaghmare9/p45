@@ -96,16 +96,3 @@ int main() {
     cout<<fact(5);
 }
 
-#include <iostream>
-using namespace std;
-int fact (int a){
-    int r;
-    if(a==0){
-        return 1;
-    }
-    r=a*fact(a-1);
-    return r;
-}
-int main() {
-    cout<<fact(5);
-}

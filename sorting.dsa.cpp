@@ -326,4 +326,112 @@ int main() {
     cout<<"--------After mergessort----------------\n";
     printarr(A,n);
 }
+#include <iostream>
+using namespace std;
+int divide(int arr[],int low,int high){
+    int pv=arr[low];
+    int i=low+1;
+    int j=high;
+    do{
+        while(arr[i]<pv){
+            i++;
+        }
+        while(arr[j]>pv){
+            j--;
+        }
+        if(i<j){
+            int tmp; 
+            tmp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=tmp;
+        }
+    }
+    while(i<j);
+             int tmp; 
+            tmp=arr[low];
+            arr[low]=arr[j];
+            arr[j]=tmp;
+            return j;
+}
+void qksort(int arr[],int low,int high)
+{
+    int pv;
+    if(low<high){
+        pv=divide(arr,low,high);
+        qksort(arr,low,pv-1);
+        qksort(arr,pv+1,high);
+        
+    }
+}
+int main() {
+ int arr[]={9,2,1,5,6};
+ int size=sizeof(arr)/sizeof(arr[0]);
+ cout<<"\nBefore applying\n";
+ for(int i=0; i<size; i++){
+     cout<<arr[i]<<"\t";
+ }
+ qksort(arr,0,size-1);
+ cout<<"\nAfter applying quik sort\n";
+ for(int i=0; i<size; i++){
+     cout<<arr[i]<<"\t";
+ }
+}
 
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void merges(int A[],int low,int mid, int high){
+    int i,j,k,B[high+1];
+    i=low;
+    j=mid+1;
+    k=low;
+    while(i<=mid && j<=high){
+        if(A[i]<A[j]){
+            B[k]=A[i];
+            i++;
+        }
+        else{
+            B[k]=A[j];
+            j++;
+        }
+        k++;
+    }
+    while(i<=mid){
+        B[k]=A[i];
+        k++;
+        i++;
+    }
+    while(j<=high){
+        B[k]=A[j];
+        k++;
+        j++;
+    }
+    for(i=low; i<=high; i++){
+        A[i]=B[i];
+    }
+    
+}
+void divide(int A[],int low,int high){
+    int mid;
+    if(low<high){
+        mid=(low+high)/2;
+        divide(A,low,mid);
+        divide(A,mid+1,high);
+        merges(A,low,mid,high);
+    }
+}
+void printarr(int A[],int n){
+    int i;
+    for(i=0; i<n; i++){
+        cout<<A[i]<<"\t";
+    }
+    cout<<"\n";
+}
+int main() {
+    int A[]={3,5,2,13,12,10,6};
+    int n=sizeof(A)/sizeof(A[0]);
+    printarr(A,n);
+    divide(A,0,n-1);
+    cout<<"--------After mergessort----------------\n";
+    printarr(A,n);
+}
